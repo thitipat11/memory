@@ -1,0 +1,19 @@
+3.8595 	INFO 	Loaded monitor calibration from ['2025_02_13 22:41']
+3.8757 	WARNING 	User requested fullscreen with size [1024  768], but screen is actually [1920, 1080]. Using actual size
+3.9977 	EXP 	Created window1 = Window(allowGUI=False, allowStencil=False, autoLog=True, backendConf=UNKNOWN, backgroundFit=<method-wrapper '__getattribute__' of attributeSetter object at 0x000001E42B0259A0>, backgroundImage=<method-wrapper '__getattribute__' of attributeSetter object at 0x000001E42B025940>, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0, 0, 0]), colorSpace='rgb', depthBits=8, fullscr=True, gamma=None, gammaErrorPolicy='raise', infoMsg=UNKNOWN, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x000001E425C57DF0>, multiSample=False, name='window1', numSamples=2, pos=[0.0, 0.0], screen=0, size=array([1920, 1080]), stencilBits=0, stereo=False, title='PsychoPy', units='height', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+3.9977 	EXP 	window1: backgroundImage = ''
+3.9977 	EXP 	window1: backgroundFit = 'none'
+4.0564 	EXP 	window1: Attempting to measure frame rate of screen (0) ...
+4.0565 	EXP 	window1: recordFrameIntervals = False
+4.2993 	EXP 	window1: recordFrameIntervals = True
+4.4829 	EXP 	Screen (0) actual frame rate measured at 59.95Hz
+4.4829 	EXP 	window1: recordFrameIntervals = False
+6.1893 	INFO 	keyboard.Keyboard is using iohub backend.
+6.1894 	INFO 	keyboard.Keyboard is using iohub backend.
+6.1894 	INFO 	keyboard.Keyboard is using iohub backend.
+6.1894 	EXP 	untitled: status = STARTED
+6.2915 	EXP 	Created imageBeforeplay = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, image='image/kumnum.png', interpolate=True, mask=None, maskParams=None, name='imageBeforeplay', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([1.78, 1.  ]), texRes=128.0, units='height', win=Window(...))
+6.3786 	EXP 	Created imagefixation = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, image='image/Screenshot (174).png', interpolate=True, mask=None, maskParams=None, name='imagefixation', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([1.78, 1.  ]), texRes=128.0, units='height', win=Window(...))
+6.3879 	EXP 	Created image_2 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, image='default.png', interpolate=True, mask=None, maskParams=None, name='image_2', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([1.78, 1.  ]), texRes=128.0, units='height', win=Window(...))
+6.7555 	INFO 	saved data to C:\psychopywork\memory\data/634489_untitled_2025-05-08_21h29.14.612.psydat
+6.7558 	INFO 	saved data to 'C:\\psychopywork\\memory\\data/634489_untitled_2025-05-08_21h29.14.612.csv'

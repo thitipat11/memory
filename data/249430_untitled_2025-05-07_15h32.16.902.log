@@ -1,0 +1,42 @@
+4.4563 	INFO 	Loaded monitor calibration from ['2025_02_13 22:41']
+4.4741 	WARNING 	User requested fullscreen with size [1024  768], but screen is actually [1920, 1080]. Using actual size
+4.5970 	EXP 	Created window1 = Window(allowGUI=False, allowStencil=False, autoLog=True, backendConf=UNKNOWN, backgroundFit=<method-wrapper '__getattribute__' of attributeSetter object at 0x000001F5DBAE88E0>, backgroundImage=<method-wrapper '__getattribute__' of attributeSetter object at 0x000001F5DBAE8880>, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0, 0, 0]), colorSpace='rgb', depthBits=8, fullscr=True, gamma=None, gammaErrorPolicy='raise', infoMsg=UNKNOWN, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x000001F5DBAAAD00>, multiSample=False, name='window1', numSamples=2, pos=[0.0, 0.0], screen=0, size=array([1920, 1080]), stencilBits=0, stereo=False, title='PsychoPy', units='height', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+4.5970 	EXP 	window1: backgroundImage = ''
+4.5970 	EXP 	window1: backgroundFit = 'none'
+4.6549 	EXP 	window1: Attempting to measure frame rate of screen (0) ...
+4.6549 	EXP 	window1: recordFrameIntervals = False
+4.8684 	EXP 	window1: recordFrameIntervals = True
+5.0520 	EXP 	Screen (0) actual frame rate measured at 59.92Hz
+5.0520 	EXP 	window1: recordFrameIntervals = False
+6.7636 	INFO 	keyboard.Keyboard is using iohub backend.
+6.7637 	INFO 	keyboard.Keyboard is using iohub backend.
+6.7637 	EXP 	untitled: status = STARTED
+6.8524 	EXP 	Created imageBeforeplay = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, image='image/kumnum.png', interpolate=True, mask=None, maskParams=None, name='imageBeforeplay', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([1.78, 1.  ]), texRes=128.0, units='height', win=Window(...))
+6.8567 	EXP 	Created image_2 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, image='default.png', interpolate=True, mask=None, maskParams=None, name='image_2', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([1.78, 1.  ]), texRes=128.0, units='height', win=Window(...))
+6.9484 	EXP 	Created image = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, image='image/Screenshot (174).png', interpolate=True, mask=None, maskParams=None, name='image', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([1.78, 1.  ]), texRes=128.0, units='height', win=Window(...))
+0.0311 	INFO 	Keyboard events cleared
+0.0309 	EXP 	imageBeforeplay: autoDraw = True
+0.8230 	EXP 	Imported memory_stim.xlsx as conditions, 42 conditions, 1 params
+0.8234 	EXP 	New trial (rep=0, index=0): <Trial 0 (0 in rep 0) data={'Memory_image': 'image/memory1.png', 'thisN': 0, 'thisTrialN': 0, 'thisRepN': 0}>
+0.9056 	DATA 	Keypress: space
+0.9141 	EXP 	imageBeforeplay: autoDraw = False
+0.9141 	EXP 	image_2: image = 'image/memory1.png'
+0.9141 	EXP 	image_2: autoDraw = True
+5.8517 	EXP 	image_2: autoDraw = False
+5.8517 	EXP 	image: autoDraw = True
+6.3202 	EXP 	New trial (rep=0, index=1): <Trial 1 (1 in rep 0) data={'Memory_image': 'image/memory1a.png', 'thisN': 1, 'thisTrialN': 1, 'thisRepN': 0}>
+6.3559 	EXP 	image: autoDraw = False
+6.3559 	EXP 	image_2: image = 'image/memory1a.png'
+6.3559 	EXP 	image_2: autoDraw = True
+11.3437 	EXP 	image_2: autoDraw = False
+11.3437 	EXP 	image: autoDraw = True
+11.8276 	EXP 	New trial (rep=0, index=2): <Trial 2 (2 in rep 0) data={'Memory_image': 'image/memory2.png', 'thisN': 2, 'thisTrialN': 2, 'thisRepN': 0}>
+11.8826 	EXP 	image: autoDraw = False
+11.8826 	EXP 	image_2: image = 'image/memory2.png'
+11.8826 	EXP 	image_2: autoDraw = True
+12.8334 	DATA 	Keypress: escape
+12.9001 	EXP 	untitled: status = STOPPED
+12.9164 	EXP 	image_2: autoDraw = False
+12.9164 	EXP 	untitled: status = STOPPED
+12.9211 	INFO 	saved data to 'C:\\psychopywork\\memory\\data/249430_untitled_2025-05-07_15h32.16.902.csv'
+12.9217 	INFO 	saved data to C:\psychopywork\memory\data/249430_untitled_2025-05-07_15h32.16.902.psydat
