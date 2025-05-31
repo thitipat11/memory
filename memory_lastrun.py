@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.5),
-    on May 15, 2025, at 17:54
+    on May 31, 2025, at 16:12
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -126,7 +126,7 @@ def setupData(expInfo, dataDir=None):
     thisExp = data.ExperimentHandler(
         name=expName, version='',
         extraInfo=expInfo, runtimeInfo=None,
-        originPath='C:\\psychopywork\\memory\\memory_lastrun.py',
+        originPath='C:\\Users\\pat\\OneDrive\\Desktop\\memory\\memory_lastrun.py',
         savePickle=True, saveWideText=True,
         dataFileName=dataDir + os.sep + filename, sortColumns='time'
     )
@@ -266,6 +266,12 @@ def setupDevices(expInfo, thisExp, win):
             deviceClass='keyboard',
             deviceName='keyBeforeplay',
         )
+    if deviceManager.getDevice('keyspace') is None:
+        # initialise keyspace
+        keyspace = deviceManager.addDevice(
+            deviceClass='keyboard',
+            deviceName='keyspace',
+        )
     if deviceManager.getDevice('key_resp') is None:
         # initialise key_resp
         key_resp = deviceManager.addDevice(
@@ -403,6 +409,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         color=[1,1,1], colorSpace='rgb', opacity=None,
         flipHoriz=False, flipVert=False,
         texRes=128.0, interpolate=True, depth=0.0)
+    keyspace = keyboard.Keyboard(deviceName='keyspace')
     
     # --- Initialize components for Routine "anwer" ---
     imaganswer = visual.ImageStim(
@@ -742,12 +749,16 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         # create an object to store info about Routine trialmemory
         trialmemory = data.Routine(
             name='trialmemory',
-            components=[image_2],
+            components=[image_2, keyspace],
         )
         trialmemory.status = NOT_STARTED
         continueRoutine = True
         # update component parameters for each repeat
         image_2.setImage(Memory_image)
+        # create starting attributes for keyspace
+        keyspace.keys = []
+        keyspace.rt = []
+        _keyspace_allKeys = []
         # store start times for trialmemory
         trialmemory.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
         trialmemory.tStart = globalClock.getTime(format='float')
@@ -815,6 +826,51 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     image_2.status = FINISHED
                     image_2.setAutoDraw(False)
             
+            # *keyspace* updates
+            waitOnFlip = False
+            
+            # if keyspace is starting this frame...
+            if keyspace.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                # keep track of start time/frame for later
+                keyspace.frameNStart = frameN  # exact frame index
+                keyspace.tStart = t  # local t and not account for scr refresh
+                keyspace.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(keyspace, 'tStartRefresh')  # time at next scr refresh
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'keyspace.started')
+                # update status
+                keyspace.status = STARTED
+                # keyboard checking is just starting
+                waitOnFlip = True
+                win.callOnFlip(keyspace.clock.reset)  # t=0 on next screen flip
+                win.callOnFlip(keyspace.clearEvents, eventType='keyboard')  # clear events on next screen flip
+            
+            # if keyspace is stopping this frame...
+            if keyspace.status == STARTED:
+                # is it time to stop? (based on global clock, using actual start)
+                if tThisFlipGlobal > keyspace.tStartRefresh + 3-frameTolerance:
+                    # keep track of stop time/frame for later
+                    keyspace.tStop = t  # not accounting for scr refresh
+                    keyspace.tStopRefresh = tThisFlipGlobal  # on global time
+                    keyspace.frameNStop = frameN  # exact frame index
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'keyspace.stopped')
+                    # update status
+                    keyspace.status = FINISHED
+                    keyspace.status = FINISHED
+            if keyspace.status == STARTED and not waitOnFlip:
+                theseKeys = keyspace.getKeys(keyList=['space'], ignoreKeys=["escape"], waitRelease=False)
+                _keyspace_allKeys.extend(theseKeys)
+                if len(_keyspace_allKeys):
+                    keyspace.keys = _keyspace_allKeys[-1].name  # just the last key pressed
+                    keyspace.rt = _keyspace_allKeys[-1].rt
+                    keyspace.duration = _keyspace_allKeys[-1].duration
+                    # was this correct?
+                    if (keyspace.keys == str('')) or (keyspace.keys == ''):
+                        keyspace.corr = 1
+                    else:
+                        keyspace.corr = 0
+            
             # check for quit (typically the Esc key)
             if defaultKeyboard.getKeys(keyList=["escape"]):
                 thisExp.status = FINISHED
@@ -854,6 +910,20 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         trialmemory.tStop = globalClock.getTime(format='float')
         trialmemory.tStopRefresh = tThisFlipGlobal
         thisExp.addData('trialmemory.stopped', trialmemory.tStop)
+        # check responses
+        if keyspace.keys in ['', [], None]:  # No response was made
+            keyspace.keys = None
+            # was no response the correct answer?!
+            if str('').lower() == 'none':
+               keyspace.corr = 1;  # correct non-response
+            else:
+               keyspace.corr = 0;  # failed to respond (incorrectly)
+        # store data for loopmemory (TrialHandler)
+        loopmemory.addData('keyspace.keys',keyspace.keys)
+        loopmemory.addData('keyspace.corr', keyspace.corr)
+        if keyspace.keys != None:  # we had a response
+            loopmemory.addData('keyspace.rt', keyspace.rt)
+            loopmemory.addData('keyspace.duration', keyspace.duration)
         # using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
         if trialmemory.maxDurationReached:
             routineTimer.addTime(-trialmemory.maxDuration)
